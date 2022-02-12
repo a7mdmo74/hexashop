@@ -27,14 +27,19 @@ window.onscroll = function () {
 
 // owl carousel
 $(document).ready(function () {
+  $(".preloader").fadeOut("slow");
   $(".owl-carousel").owlCarousel({
+    autoplay: true,
     nav: true,
-    margin: 10,
+    margin: 30,
     responsiveClass: true,
     responsive: {
       0: {
         items: 1,
         nav: false,
+      },
+      600: {
+        items: 2,
       },
       1000: {
         items: 3,
@@ -42,3 +47,52 @@ $(document).ready(function () {
     },
   });
 });
+
+$(document).ready(function () {
+  $(document).on("scroll", onScroll);
+
+  //smoothscroll
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $("a").each(function () {
+      $(this).removeClass("active");
+    });
+    $(this).addClass("active");
+
+    var target = this.hash,
+      menu = target;
+    $target = $(target);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $target.offset().top + 2,
+        },
+        500,
+        "swing",
+        function () {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
+        }
+      );
+  });
+});
+
+function onScroll(event) {
+  var scrollPos = $(document).scrollTop();
+  $("#navbarResponsive a").each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (
+      refElement.position().top <= scrollPos &&
+      refElement.position().top + refElement.height() > scrollPos
+    ) {
+      $("#navbarResponsive ul li a").removeClass("active");
+      currLink.addClass("active");
+    } else {
+      currLink.removeClass("active");
+    }
+  });
+}
