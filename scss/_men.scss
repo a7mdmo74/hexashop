@@ -1,0 +1,98 @@
+.men {
+  &__heading {
+    h2 {
+      font-size: 2em;
+      font-weight: 700;
+      color: $black-color;
+    }
+    p {
+      font-size: 14px;
+      color: $light-color;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+  .card {
+    border: none;
+  }
+  .card-title {
+    @include flexBox(row, space-between);
+  }
+  .card-text {
+    font-size: 18px;
+    color: #a1a1a1;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+  }
+}
+
+.owl-nav {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-25px);
+  -webkit-transform: translateY(-25px);
+  -moz-transform: translateY(-25px);
+  -ms-transform: translateY(-25px);
+  -o-transform: translateY(-25px);
+}
+
+.owl-prev {
+  position: absolute;
+  left: -80px;
+  outline: none;
+  opacity: 0.75;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  &::before {
+    display: inline-block;
+    font-family: "FontAwesome";
+    color: $black-color;
+    font-size: 25px;
+    font-weight: 700;
+    content: "\f104";
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    line-height: 48px;
+    border: 1px solid $black-color;
+  }
+}
+.owl-next {
+  outline: none;
+  position: absolute;
+  right: -70px;
+  opacity: 0.75;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  &::before {
+    display: inline-block;
+    font-family: "FontAwesome";
+    color: $black-color;
+    font-size: 25px;
+    font-weight: 700;
+    content: "\f105";
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    line-height: 48px;
+    border: 1px solid $black-color;
+  }
+}
+
+.owl-next span,
+.owl-prev span {
+  opacity: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  @include flexBox(column, center);
+}

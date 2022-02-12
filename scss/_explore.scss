@@ -1,0 +1,66 @@
+.explore {
+  &__content {
+    h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $black-color;
+    }
+    span {
+      font-size: 1rem;
+      color: $nav-color;
+      font-weight: 500;
+      display: block;
+      margin-top: 25px;
+    }
+    .quote {
+      margin-top: 25px;
+      i {
+        float: left;
+        font-size: 32px;
+        margin-right: 15px;
+        margin-top: 10px;
+      }
+      p {
+        font-style: italic;
+        color: #2a2a2a;
+        font-weight: 500;
+        font-size: 1rem;
+        display: block;
+        margin-top: 25px;
+      }
+    }
+    .btn {
+      background-color: #fff;
+      color: $black-color;
+      border-color: $black-color;
+      margin-top: 35px;
+      &:hover {
+        background-color: $black-color;
+        color: #fff;
+      }
+    }
+  }
+  .box {
+    min-height: 255px;
+    background-color: #f8f8f8;
+    text-align: center;
+    width: 100%;
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2a2a2a;
+      padding-top: 90px;
+      margin-bottom: 5px;
+    }
+    span {
+      font-size: 14px;
+      font-style: italic;
+      color: #aaa;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+}

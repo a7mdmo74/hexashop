@@ -1,0 +1,115 @@
+.hero {
+  .left-content .thumb {
+    position: relative;
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
+    .inner-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      h4 {
+        color: #fff;
+        margin-top: -10px;
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      span {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+        font-style: italic;
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .right-content .right-first-image {
+    margin-bottom: 28.5px;
+    .thumb {
+      position: relative;
+      text-align: center;
+      img {
+        width: 100%;
+        overflow: hidden;
+      }
+      .inner-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        h4 {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+        span {
+          font-size: 16px;
+          color: #fff;
+          font-style: italic;
+        }
+      }
+      .hover-content {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        text-align: center;
+        background-color: rgba(42, 42, 42, 0.97);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        .inner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          h4 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+          }
+        }
+        p {
+          color: #fff;
+          padding: 0px 20px;
+          margin-bottom: 20px;
+        }
+      }
+      &:hover .hover-content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .main-border-button a {
+    font-size: 13px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 25px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #fff;
+      color: $black-color;
+    }
+  }
+}

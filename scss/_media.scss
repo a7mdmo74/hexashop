@@ -1,0 +1,44 @@
+.media {
+  &__heading {
+    h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $black-color;
+    }
+    span {
+      font-size: 14px;
+      color: #a1a1a1;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+  &__content {
+    position: relative;
+    .overlay {
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba($black-color, $alpha: 0.7);
+      opacity: 0;
+      color: #fff;
+      .hover {
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+      }
+    }
+    &:hover .overlay {
+      opacity: 0.9;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

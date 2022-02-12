@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 90px 0;
+  border-bottom: 3px dotted $light-color;
+}
+
+a {
+  text-decoration: none !important;
+  &:active,
+  &:hover {
+    color: $nav-color;
+  }
+}
+
+@mixin flexBox($dir, $space) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $space;
+  align-items: center;
+}
